@@ -448,3 +448,30 @@
 2021-11-28 17:29:25.272  INFO 305341 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2021-11-28 17:29:25.272  INFO 305341 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-11-28 17:29:25.275  INFO 305341 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-28 20:04:39.918  INFO 311924 --- [main] c.u.ecommerce.ECommerceApplication       : Starting ECommerceApplication using Java 11.0.11 on yoga with PID 311924 (/home/robisaveanu/Documents/eCommerce-Application/target/classes started by robisaveanu in /home/robisaveanu/Documents/eCommerce-Application)
+2021-11-28 20:04:39.920  INFO 311924 --- [main] c.u.ecommerce.ECommerceApplication       : No active profile set, falling back to default profiles: default
+2021-11-28 20:04:40.437  INFO 311924 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-11-28 20:04:40.492  INFO 311924 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
+2021-11-28 20:04:40.818  INFO 311924 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-28 20:04:40.824  INFO 311924 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-28 20:04:40.825  INFO 311924 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-11-28 20:04:40.867  INFO 311924 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-28 20:04:40.867  INFO 311924 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 900 ms
+2021-11-28 20:04:40.982  INFO 311924 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-28 20:04:41.008  INFO 311924 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-28 20:04:41.045  INFO 311924 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.23.Final
+2021-11-28 20:04:41.078  WARN 311924 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-28 20:04:41.132  INFO 311924 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-28 20:04:41.220  INFO 311924 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-28 20:04:41.229  INFO 311924 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a1b8a46, org.springframework.security.web.context.SecurityContextPersistenceFilter@2a2dc0a, org.springframework.security.web.header.HeaderWriterFilter@14168e1, org.springframework.web.filter.CorsFilter@2921199d, org.springframework.security.web.authentication.logout.LogoutFilter@9accff0, com.udacity.ecommerce.security.JWTAuthenticationFilter@3d40a3b4, com.udacity.ecommerce.security.JWTAuthorizationFilter@7f13811b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36ef1d65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13bdf540, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59fc6d05, org.springframework.security.web.session.SessionManagementFilter@1e225820, org.springframework.security.web.access.ExceptionTranslationFilter@709f0202, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ca610a0]
+2021-11-28 20:04:41.378  INFO 311924 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-28 20:04:41.392  INFO 311924 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-11-28 20:04:41.508  INFO 311924 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-28 20:04:41.510  INFO 311924 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-11-28 20:04:41.869  INFO 311924 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-28 20:04:41.874  INFO 311924 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-28 20:04:42.084  INFO 311924 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-11-28 20:04:42.090  INFO 311924 --- [main] c.u.ecommerce.ECommerceApplication       : Started ECommerceApplication in 2.47 seconds (JVM running for 2.958)
+2021-11-28 20:07:37.341  INFO 311924 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-28 20:07:37.341  INFO 311924 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-28 20:07:37.343  INFO 311924 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms

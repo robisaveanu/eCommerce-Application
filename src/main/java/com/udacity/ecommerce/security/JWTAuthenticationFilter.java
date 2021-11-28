@@ -2,7 +2,6 @@ package com.udacity.ecommerce.security;
 
 import com.auth0.jwt.JWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import com.udacity.ecommerce.model.persistence.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

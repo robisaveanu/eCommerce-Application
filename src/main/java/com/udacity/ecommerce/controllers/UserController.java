@@ -1,21 +1,15 @@
 package com.udacity.ecommerce.controllers;
 
+import com.udacity.ecommerce.model.persistence.Cart;
+import com.udacity.ecommerce.model.persistence.User;
+import com.udacity.ecommerce.model.persistence.repositories.CartRepository;
+import com.udacity.ecommerce.model.persistence.repositories.UserRepository;
+import com.udacity.ecommerce.model.requests.CreateUserRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.udacity.ecommerce.model.persistence.Cart;
-import com.udacity.ecommerce.model.persistence.repositories.CartRepository;
-import com.udacity.ecommerce.model.persistence.repositories.UserRepository;
-import com.udacity.ecommerce.model.requests.CreateUserRequest;
-import com.udacity.ecommerce.model.persistence.User;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/user")
