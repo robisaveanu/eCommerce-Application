@@ -1,10 +1,12 @@
 package com.udacity.ecommerce.controllers;
 
-import java.util.Optional;
-import java.util.stream.IntStream;
-
+import com.udacity.ecommerce.model.persistence.Cart;
 import com.udacity.ecommerce.model.persistence.Item;
 import com.udacity.ecommerce.model.persistence.User;
+import com.udacity.ecommerce.model.persistence.repositories.CartRepository;
+import com.udacity.ecommerce.model.persistence.repositories.ItemRepository;
+import com.udacity.ecommerce.model.persistence.repositories.UserRepository;
+import com.udacity.ecommerce.model.requests.ModifyCartRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,11 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.udacity.ecommerce.model.persistence.Cart;
-import com.udacity.ecommerce.model.requests.ModifyCartRequest;
-import com.udacity.ecommerce.model.persistence.repositories.CartRepository;
-import com.udacity.ecommerce.model.persistence.repositories.UserRepository;
-import com.udacity.ecommerce.model.persistence.repositories.ItemRepository;
+import java.util.Optional;
+import java.util.stream.IntStream;
 
 @RestController
 @RequestMapping("/api/cart")
