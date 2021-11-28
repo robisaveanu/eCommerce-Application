@@ -22,46 +22,46 @@ import com.udacity.ecommerce.model.persistence.repositories.ItemRepository;
 @RequestMapping("/api/cart")
 public class CartController {
 
-	private final UserRepository userRepository;
-	private final CartRepository cartRepository;
-	private final ItemRepository itemRepository;
+    private final UserRepository userRepository;
+    private final CartRepository cartRepository;
+    private final ItemRepository itemRepository;
 
-	public CartController(UserRepository userRepository, CartRepository cartRepository, ItemRepository itemRepository) {
-		this.userRepository = userRepository;
-		this.cartRepository = cartRepository;
-		this.itemRepository = itemRepository;
-	}
+    public CartController(UserRepository userRepository, CartRepository cartRepository, ItemRepository itemRepository) {
+        this.userRepository = userRepository;
+        this.cartRepository = cartRepository;
+        this.itemRepository = itemRepository;
+    }
 
-	@PostMapping("/addToCart")
-	public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
-		User user = userRepository.findByUsername(request.getUsername());
-		Optional<Item> item = itemRepository.findById(request.getItemId());
+    @PostMapping("/addToCart")
+    public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
+        User user = userRepository.findByUsername(request.getUsername());
+        Optional<Item> item = itemRepository.findById(request.getItemId());
 
-		if(user == null || !item.isPresent()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-		}
+        if (user == null || !item.isPresent()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
 
-		Cart cart = user.getCart();
-		IntStream.range(0, request.getQuantity()).forEach(i -> cart.addItem(item.get()));
-		cartRepository.save(cart);
+        Cart cart = user.getCart();
+        IntStream.range(0, request.getQuantity()).forEach(i -> cart.addItem(item.get()));
+        cartRepository.save(cart);
 
-		return ResponseEntity.ok(cart);
-	}
+        return ResponseEntity.ok(cart);
+    }
 
-	@PostMapping("/removeFromCart")
-	public ResponseEntity<Cart> removeFromCart(@RequestBody ModifyCartRequest request) {
-		User user = userRepository.findByUsername(request.getUsername());
-		Optional<Item> item = itemRepository.findById(request.getItemId());
+    @PostMapping("/removeFromCart")
+    public ResponseEntity<Cart> removeFromCart(@RequestBody ModifyCartRequest request) {
+        User user = userRepository.findByUsername(request.getUsername());
+        Optional<Item> item = itemRepository.findById(request.getItemId());
 
-		if(user == null || !item.isPresent()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-		}
+        if (user == null || !item.isPresent()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
 
-		Cart cart = user.getCart();
-		IntStream.range(0, request.getQuantity()).forEach(i -> cart.removeItem(item.get()));
-		cartRepository.save(cart);
+        Cart cart = user.getCart();
+        IntStream.range(0, request.getQuantity()).forEach(i -> cart.removeItem(item.get()));
+        cartRepository.save(cart);
 
-		return ResponseEntity.ok(cart);
-	}
+        return ResponseEntity.ok(cart);
+    }
 
 }

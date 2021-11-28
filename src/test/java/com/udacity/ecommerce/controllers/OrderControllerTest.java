@@ -23,9 +23,9 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 public class OrderControllerTest {
 
-    private OrderController orderController;
     private final OrderRepository orderRepo = mock(OrderRepository.class);
     private final UserRepository userRepo = mock(UserRepository.class);
+    private OrderController orderController;
 
     @BeforeEach
     public void setUp() {

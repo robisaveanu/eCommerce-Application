@@ -24,10 +24,10 @@ import static org.mockito.Mockito.when;
 
 @SpringBootTest
 public class CartControllerTest {
-    private CartController cartController;
     private final ItemRepository itemRepo = mock(ItemRepository.class);
     private final CartRepository cartRepo = mock(CartRepository.class);
     private final UserRepository userRepo = mock(UserRepository.class);
+    private CartController cartController;
 
     @BeforeEach
     public void setUp() {

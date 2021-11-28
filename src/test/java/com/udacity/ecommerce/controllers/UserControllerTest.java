@@ -20,10 +20,10 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 public class UserControllerTest {
 
-    private UserController userController;
     private final UserRepository userRepo = mock(UserRepository.class);
     private final CartRepository cartRepo = mock(CartRepository.class);
     private final BCryptPasswordEncoder encoder = mock(BCryptPasswordEncoder.class);
+    private UserController userController;
 
     @BeforeEach
     public void setUp() {

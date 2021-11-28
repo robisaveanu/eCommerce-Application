@@ -15,29 +15,29 @@ import com.udacity.ecommerce.model.persistence.repositories.ItemRepository;
 @RequestMapping("/api/item")
 public class ItemController {
 
-	private final ItemRepository itemRepository;
+    private final ItemRepository itemRepository;
 
-	public ItemController(ItemRepository itemRepository) {
-		this.itemRepository = itemRepository;
-	}
+    public ItemController(ItemRepository itemRepository) {
+        this.itemRepository = itemRepository;
+    }
 
-	@GetMapping
-	public ResponseEntity<List<Item>> getItems() {
-		return ResponseEntity.ok(itemRepository.findAll());
-	}
+    @GetMapping
+    public ResponseEntity<List<Item>> getItems() {
+        return ResponseEntity.ok(itemRepository.findAll());
+    }
 
-	@GetMapping("/{id}")
-	public ResponseEntity<Item> getItemById(@PathVariable Long id) {
-		return ResponseEntity.of(itemRepository.findById(id));
-	}
+    @GetMapping("/{id}")
+    public ResponseEntity<Item> getItemById(@PathVariable Long id) {
+        return ResponseEntity.of(itemRepository.findById(id));
+    }
 
-	@GetMapping("/name/{name}")
-	public ResponseEntity<List<Item>> getItemsByName(@PathVariable String name) {
-		List<Item> items = itemRepository.findByName(name);
-		return items == null || items.isEmpty()
-				? ResponseEntity.notFound().build()
-				: ResponseEntity.ok(items);
+    @GetMapping("/name/{name}")
+    public ResponseEntity<List<Item>> getItemsByName(@PathVariable String name) {
+        List<Item> items = itemRepository.findByName(name);
+        return items == null || items.isEmpty()
+                ? ResponseEntity.notFound().build()
+                : ResponseEntity.ok(items);
 
-	}
+    }
 
 }

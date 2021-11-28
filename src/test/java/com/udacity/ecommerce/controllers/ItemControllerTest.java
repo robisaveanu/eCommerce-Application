@@ -21,8 +21,8 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 public class ItemControllerTest {
 
-    private ItemController itemController;
     private final ItemRepository itemRepo = mock(ItemRepository.class);
+    private ItemController itemController;
 
     @BeforeEach
     public void setUp() {
